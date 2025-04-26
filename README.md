@@ -12,11 +12,14 @@ This project implements a Deep Convolutional Generative Adversarial Network (DCG
   - TensorBoard logging
   - Sample image generation and visualization
 
+- `generated_samples/` — Example generated images saved during training.
+
 ---
 
 ## Results
 
-After training for approximately 50–100 epochs, the Generator produces realistic handwritten digits across all classes.  
+After training for approximately 50–100 epochs, the Generator produces realistic handwritten digits across all classes.
+
 Sample improvement over training:
 
 | Early Epochs | Later Epochs |
@@ -43,4 +46,50 @@ Install the necessary dependencies with:
 
 ```bash
 pip install -r requirements.txt
+```
 
+Required packages include:
+
+- torch >= 2.0.0
+- torchvision >= 0.15.0
+- matplotlib >= 3.7.0
+- tensorboard >= 2.12.0
+- imageio >= 2.27.0
+
+---
+
+## How to Run
+
+1. Open the Jupyter Notebook:
+
+```bash
+jupyter notebook DCGAN_MNIST_digit_generation.ipynb
+```
+
+2. Run all cells to start training the GAN.
+
+3. To monitor progress in TensorBoard, run inside the notebook:
+
+```python
+%load_ext tensorboard
+%tensorboard --logdir=runs
+```
+
+Generated sample images will be logged every few epochs.
+
+---
+
+## Future Improvements
+
+- Explore using Wasserstein GAN (WGAN) loss for more stable training
+- Extend Generator with residual blocks or self-attention mechanisms
+- Apply the approach to more complex datasets like CIFAR-10
+- Introduce instance noise for additional Discriminator regularization
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
