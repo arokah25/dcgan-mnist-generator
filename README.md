@@ -43,3 +43,11 @@ Install the necessary dependencies with:
 
 ```bash
 pip install -r requirements.txt
+
+
+**Future Improvements**
+Explore using Wasserstein GAN (WGAN) loss for more stable training
+
+Extend Generator with residual blocks or self-attention mechanisms
+
+Apply the approach to more complex datasets like CIFAR-10
